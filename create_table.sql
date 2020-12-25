@@ -72,13 +72,12 @@ CREATE TABLE role(
 CREATE TABLE admin(
   id int NOT NULL PRIMARY KEY auto_increment,
   idRole int not null,
-  createdate varchar(255) null,
+  birthday varchar(255) null,
   username varchar(255) not null,
   password varchar(255) not null,
   fullname nvarchar(800) null,
   address nvarchar(800) null,
-  phone varchar(50) null,
-  status varchar(10) default "1"
+  gender nvarchar(255) null,
 );
 ALTER TABLE admin ADD CONSTRAINT fk_idRole FOREIGN KEY (idRole) REFERENCES role(id);
 
